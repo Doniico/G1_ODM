@@ -44,7 +44,7 @@ footer {
 	
 	<form action="SimpleSearchHB" method="POST">
 	
-		Title: <input type="text" name="keywordTitle"> <br />
+		Appointment ID: <input type="text" name="idGet"> <br />
 		<!-- Author: <input type = "text" name="keywordAuthor"> <br />-->
 		
 		<input type="submit" value="Search" />

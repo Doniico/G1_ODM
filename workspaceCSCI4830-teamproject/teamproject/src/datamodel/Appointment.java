@@ -19,7 +19,7 @@ import javax.persistence.Table;
   PRIMARY KEY (id));
  */
 @Entity
-@Table(name = "TechExerciseTableUppala")
+@Table(name = "Appointments")
 public class Appointment {
 
    @Id
