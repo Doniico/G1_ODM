@@ -1,0 +1,67 @@
+<html>
+<head>
+<style>
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+}
+nav {
+    line-height:30px;
+    background-color:#010101;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+</style>
+
+</head>
+
+<body>
+<header>
+<h1> Insert Data</h1>
+</header>
+
+<nav>
+	<li><a href = "/teamproject/ODMDesign.html">Home - Display Names</a></li>
+	<li><a href = "/teamproject/simpleInsertHB.html">Appointment Creation</a></li>
+	<li><a href = "/teamproject/simpleInsertHB.html">Appointment Creation</a></li>
+</nav>
+
+<section>
+	<h1>User Input</h1>
+	
+	<form action="SimpleInsertHB" method="POST">
+		
+		ID Number: <input type="number" name="id"> <br />
+		First Name: <input type="text" name="firstName"> <br />
+		Last Name: <input type="text" name="lastName"> <br />
+		Address: <input type="text" name="address"> <br />
+		Date (YYYY-MM-DD): <input type="text" name="date"> <br />
+		Time (HH:MM): <input type="text" name="time"> <br />
+		Appointment Details: <input type="text" name="details"> <br />
+		
+		<input type="submit" value="Submit" />
+	</form>
+
+</section>
+
+<footer>
+Copyright CSCI 4830 - Software Engineering Class Spring 2020
+</footer>
+</body>
+</html>

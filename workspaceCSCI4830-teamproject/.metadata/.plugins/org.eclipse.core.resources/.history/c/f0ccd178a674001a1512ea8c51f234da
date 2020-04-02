@@ -1,0 +1,166 @@
+#navBar{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	background-color: "#315185";
+	font-size: 15px;
+	z-index: 999;
+	   }
+#navBar li{
+	display: inline;
+	float: right;
+	padding: 10px;
+	color: #FFFFFF;
+	font-family: monospace;
+		  }
+#navBar li:hover {
+	color: #FFFFFF;
+	background-color: #4286f4;
+			  }
+#navBar a{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-family: monospace;
+	font-size: 15px;
+	display: block;
+		 }
+
+#menuTitle{
+	font-family: monospace;
+	color: #blue;
+	font-size: 30px;
+	background-color: blue;
+		  }
+#menu li{
+		color: #ffffff;
+		font-family: monospace;
+		}
+#menu a{
+		text-decoration: none;
+		color: #ffffff;
+		font-family: monospace;
+		font-size: 20px;
+		display: block;
+	   }
+#menu li a:hover{
+		background-color: #4286f4;
+		color: #111111;
+			   }
+#menu{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 15%;
+	background-image: url("http://www.newhopeschool.org/wp-content/uploads/2017/10/2560x1440-teal-blue-solid-color-background.jpg");
+	text-align: center;
+	position: fixed;
+	height: 100%;
+	left: 0px;
+	overflow: auto;
+	z-index: 999;
+	 }
+
+#homeImg{
+	position: relative;
+	display: block;
+	margin: auto;
+		}
+#homeImg img{
+	width: 700px;
+	height: 500px;
+	position: relative;
+	left: 25%;
+	background-size: 700px 500px;
+		   }
+
+#scrollList{
+	position: relative;
+	left: 50%;
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	font-family: monospace;
+	color: #FEFEFE;
+	z-index: 999;
+}
+
+body{
+	background-image: url("https://i.imgur.com/VqPwuWR.png");
+	background-repeat: repeat;
+		  }
+
+.scrollList {
+	position: absolute;
+	width:100%;
+	height: 725px;
+	overflow: hidden;
+	left: 50%;
+	color: #FFFFFF;
+}
+
+.scrollList > li{
+	position:absolute;
+	width:100%;
+}
+
+.scrollList {
+  -webkit-transition: opacity 5s ease-out;
+  -webkit-animation: autoScrolling 10s linear infinite;
+}
+
+   input[type = text] {
+     position: absolute;
+     width : 50%;
+     padding-left: 12px;
+     margin: 8px 0;
+     box-sizing: border-box;
+
+   }
+
+   input[type = text]:focus {
+     border-style: 3px solid #000000;
+   }
+
+   #largeInput textarea{
+     position: absolute;
+     width: 100%;
+     height: 500px;
+     padding: 12px;
+     margin: 8px;
+     box-sizing: border-box;
+     font-style: monospace;
+   }
+
+   #largeInput:focus {
+     border-style: 3px solid #000000;
+   }
+
+   #formHeading {
+     font-size: 25px;
+     position: relative;
+     font-family: monospace;
+     color: white;
+     text-align: left;
+     padding: 25px;
+   }
+
+#apptNotes{
+	min-height: 100px;
+	min-width: 763px;
+	float: left;
+	/*width: 75%;*/
+	margin-top:10px;
+}
+
+   label {
+     font-size: 20px;
+     font-style: monospace;
+     color: white;
+     padding: 12px, 12px, 12px, 0;
+     display: inline-block;
+   }

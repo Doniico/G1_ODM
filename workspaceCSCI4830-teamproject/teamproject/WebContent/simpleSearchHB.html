@@ -1,59 +1,33 @@
 <html>
 <head>
-<style>
-header {
-    background-color:black;
-    color:white;
-    text-align:center;
-    padding:5px;	 
-}
-nav {
-    line-height:30px;
-    background-color:#eeeeee;
-    height:300px;
-    width:100px;
-    float:left;
-    padding:5px;	      
-}
-section {
-    width:350px;
-    float:left;
-    padding:10px;	 	 
-}
-footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px;	 	 
-}
-</style>
+<link href = "ODMcss.css" rel = "stylesheet">
 </head>
 
 <body>
 <header>
-<h1> Search Data (Hibernate) </h1>
 </header>
 
-<nav>
-<a href="/webproject/simpleInsertHB.html"> Insert Data</a> <br>
-</nav>
+<ul id = "navBar">
+	<li><a href = "/teamproject/ODMDesign.html">Home - Display Names</a></li>
+	<li><a href = "/teamproject/simpleInsertHB.html">Appointment Creation</a></li>
+	<li><a href = "/teamproject/simpleSearchHB.html">Search Appointments</a></li>
+</ul>
 
 <section>
-	<h1>User Input</h1>
 	
-	<form action="SimpleSearchHB" method="POST">
+	<h3 id = "formHeading">Search Data</h3>
 	
-		Appointment ID: <input type="text" name="keywordTitle"> <br />
-		<!-- Author: <input type = "text" name="keywordAuthor"> <br />-->
+	<div text = "white">
+		<form action="SimpleSearchHB" method="POST">
 		
-		<input type="submit" value="Search" />
-	</form>
+			Appointment ID:<input type="text" name="keywordTitle" id = "fancySearch"> <br />			
+			<br>
+			<br>
+			<input type="submit" value="Search" />
+		</form>
+	</div>
 
 </section>
 
-<footer>
-Copyright
-</footer>
 </body>
 </html>
