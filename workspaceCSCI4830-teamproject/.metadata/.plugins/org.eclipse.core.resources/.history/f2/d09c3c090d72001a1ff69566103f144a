@@ -1,0 +1,113 @@
+/**
+ */
+package util;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+import datamodel.Appointment;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+/**
+ * @since JavaSE-1.8
+ */
+public class UtilDBUppala {
+   static SessionFactory sessionFactory = null;
+
+   public static SessionFactory getSessionFactory() 
+   {
+      if (sessionFactory != null) 
+      {
+         return sessionFactory;
+      }
+     
+      Configuration configuration = new Configuration().configure();
+      StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
+      sessionFactory = configuration.buildSessionFactory(builder.build());
+      return sessionFactory;
+   }
+
+   public static List<Appointment> listBooks() 
+   {
+      List<Appointment> resultList = new ArrayList<Appointment>();
+
+      Session session = getSessionFactory().openSession();
+      Transaction tx = null;
+
+      try
+      {
+         tx = session.beginTransaction();
+         List<?> books = session.createQuery("FROM Appointment").list();
+         for (Iterator<?> iterator = books.iterator(); iterator.hasNext();) {
+        	 Appointment book = (Appointment) iterator.next();
+            resultList.add(book);
+         }
+         tx.commit();
+      }
+      catch (HibernateException e) {
+         if (tx != null)
+            tx.rollback();
+         e.printStackTrace();
+      } finally {
+         session.close();
+      }
+      return resultList;
+   }
+
+   public static List<Appointment> listBooks(String keyword) {
+      List<Appointment> resultList = new ArrayList<Appointment>();
+
+      Session session = getSessionFactory().openSession();
+      Transaction tx = null;
+
+      try 
+      {
+         tx = session.beginTransaction();
+         List<?> books = session.createQuery("FROM Appointment").list();
+         for (Iterator<?> iterator = books.iterator(); iterator.hasNext();) 
+         {
+        	Appointment book = (Appointment) iterator.next();
+            if (book.getTitle().equals(keyword)) 
+            {
+               resultList.add(book);
+            }
+         }
+         tx.commit();
+      }
+      catch (HibernateException e) 
+      {
+         if (tx != null)
+            tx.rollback();
+         e.printStackTrace();
+      } finally {
+         session.close();
+      }
+      return resultList;
+   }
+
+   public static void createBooks(String firstName, String lastName, String address,
+		   String date, String time, String details) 
+   {
+      Session session = getSessionFactory().openSession();
+      Transaction tx = null;
+      try {
+         tx = session.beginTransaction();
+         session.save(new Appointment(firstName, lastName, address, date, time, details));
+         tx.commit();
+      } catch (HibernateException e) {
+         if (tx != null)
+            tx.rollback();
+         e.printStackTrace();
+      } finally {
+         session.close();
+      }
+   }
+}
