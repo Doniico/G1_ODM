@@ -1,0 +1,9 @@
+127.0.0.1 - - [01/Apr/2020:22:48:48 -0500] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [01/Apr/2020:22:48:49 -0500] "GET /teamproject/simpleInsertHB.html HTTP/1.1" 200 1248
+0:0:0:0:0:0:0:1 - - [01/Apr/2020:22:49:15 -0500] "POST /teamproject/SimpleInsertHB HTTP/1.1" 500 3469
+127.0.0.1 - - [01/Apr/2020:22:50:12 -0500] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [01/Apr/2020:22:50:35 -0500] "POST /teamproject/SimpleInsertHB HTTP/1.1" 200 427
+0:0:0:0:0:0:0:1 - - [01/Apr/2020:22:50:37 -0500] "GET /webproject-techexercise-uppala/simpleSearchHB.html HTTP/1.1" 404 1086
+0:0:0:0:0:0:0:1 - - [01/Apr/2020:22:50:46 -0500] "GET /teamproject/simpleSearchHB.html HTTP/1.1" 200 969
+127.0.0.1 - - [01/Apr/2020:22:51:28 -0500] "GET / HTTP/1.1" 404 1036
+127.0.0.1 - - [01/Apr/2020:22:53:27 -0500] "GET / HTTP/1.1" 404 1036

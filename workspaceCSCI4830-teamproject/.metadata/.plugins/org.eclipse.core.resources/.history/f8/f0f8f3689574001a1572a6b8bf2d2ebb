@@ -25,22 +25,22 @@ public class SimpleSearchHB extends HttpServlet implements Info {
 
       response.setContentType("text/html");
       PrintWriter out = response.getWriter();
-      String id = "Database Result";
+      String title = "Database Result";
       String docType = "<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">\n"; //
       out.println(docType + //
             "<html>\n" + //
-            "<head><title>" + id + "</title></head>\n" + //
+            "<head><title>" + title + "</title></head>\n" + //
             "<body bgcolor=\"#f0f0f0\">\n" + //
-            "<h1 align=\"center\">" + id + "</h1>\n");
+            "<h1 align=\"center\">" + title + "</h1>\n");
       out.println("<ul>");
 
-      List<Appointment> listAppointment = null;
+      List<Appointment> listBooks = null;
       if (keyword != null && !keyword.isEmpty()) {
-    	  listAppointment = UtilDB.listAppointments(keyword);
+    	  listBooks = UtilDB.listAppointments(keyword);
       } else {
-    	  listAppointment = UtilDB.listAppointments();
+    	  listBooks = UtilDB.listAppointments();
       }
-      display(listAppointment, out);
+      display(listBooks, out);
       out.println("</ul>");
       out.println("<a href=/" + projectName + "/" + searchWebName + ">Search Data</a> <br>");
       out.println("</body></html>");
