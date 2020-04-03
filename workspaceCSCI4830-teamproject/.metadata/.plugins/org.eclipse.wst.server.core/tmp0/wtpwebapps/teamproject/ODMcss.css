@@ -36,21 +36,6 @@
 	font-size: 30px;
 	background-color: blue;
 		  }
-#menu li{
-		color: #ffffff;
-		font-family: monospace;
-		}
-#menu a{
-		text-decoration: none;
-		color: #ffffff;
-		font-family: monospace;
-		font-size: 20px;
-		display: block;
-	   }
-#menu li a:hover{
-		background-color: #4286f4;
-		color: #111111;
-			   }
 #menu{
 	list-style-type: none;
 	margin: 0;
@@ -113,55 +98,3 @@ body{
   -webkit-transition: opacity 5s ease-out;
   -webkit-animation: autoScrolling 10s linear infinite;
 }
-
-   input[type = text] {
-     position: absolute;
-     width : 50%;
-     padding-left: 12px;
-     margin: 8px 0;
-     box-sizing: border-box;
-
-   }
-
-   input[type = text]:focus {
-     border-style: 3px solid #000000;
-   }
-
-   #largeInput textarea{
-     position: absolute;
-     width: 100%;
-     height: 500px;
-     padding: 12px;
-     margin: 8px;
-     box-sizing: border-box;
-     font-style: monospace;
-   }
-
-   #largeInput:focus {
-     border-style: 3px solid #000000;
-   }
-
-   #formHeading {
-     font-size: 25px;
-     position: relative;
-     font-family: monospace;
-     color: white;
-     text-align: left;
-     padding: 25px;
-   }
-
-#apptNotes{
-	min-height: 100px;
-	min-width: 763px;
-	float: left;
-	/*width: 75%;*/
-	margin-top:10px;
-}
-
-   label {
-     font-size: 20px;
-     font-style: monospace;
-     color: white;
-     padding: 12px, 12px, 12px, 0;
-     display: inline-block;
-   }

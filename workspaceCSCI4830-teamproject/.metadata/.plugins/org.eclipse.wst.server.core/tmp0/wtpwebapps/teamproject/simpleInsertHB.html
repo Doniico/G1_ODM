@@ -1,6 +1,38 @@
 <html>
 <head>
 <link href = "ODMcss.css" rel = "stylesheet">
+<style>
+input[type=text], select {
+  width: 50%;
+  padding: 6px 20px;
+  padding-left: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #32a852;
+  color: white;
+  padding: 6px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=text]:focus {
+  border: 3px solid #4286f4;
+}
+</style>
 </head>
 
 <body>
@@ -20,24 +52,24 @@
 	<br>
 	<br>
 	<br>
-	<div style="color:white;display: inline-block">
+	<div style="color:white;display: inline-block;font-family: monospace;">
 		<form action="SimpleInsertHB" method="POST">
 			
-			ID Number: <input type="number" name="id"> <br />
-			<br>
-			First Name: <input type="text" name="firstName"> <br />
-			<br>
-			Last Name: <input type="text" name="lastName"> <br />
-			<br>
-			Address: <input type="text" name="address"> <br />
-			<br>
-			Date (YYYY-MM-DD): <input type="text" name="date"> <br />
-			<br>
-			Time (HH:MM): <input type="text" name="time"> <br />
-			<br>
-			Appointment Details: <input type="text" name="details"> <br />
-			<br>
-			<br>
+			ID Number: <input type="text" name="id">
+			<br><br><br>
+			First Name: <input type="text" name="firstName">
+			<br><br><br>
+			Last Name: <input type="text" name="lastName">
+			<br><br><br>
+			Address: <input type="text" name="address">
+			<br><br><br>
+			Date (YYYY-MM-DD): <input type="text" name="date">
+			<br><br><br>
+			Time (HH:MM): <input type="text" name="time">
+			<br><br><br>
+			Appointment Details: <input type="text" name="details">
+			<br><br><br>
+
 			
 			<input type="submit" value="Submit" />
 		</form>

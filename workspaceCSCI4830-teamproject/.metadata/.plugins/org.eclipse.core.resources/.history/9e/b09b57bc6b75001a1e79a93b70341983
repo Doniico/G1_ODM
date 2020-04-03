@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Open Door Mission</title>
+	<!--shows an icon next to the title--><link rel="icon" href="https://www.nebraskaimpact.com/sites/default/files/org_logos/opendoormission_logo_withwords.jpg">
+	<link href = "ODMcss.css" rel = "stylesheet">
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<script src = "ODMjs.js"></script>
+</head>
+
+<header>
+</header>
+
+<body>
+<ul id = "navBar">
+	<li style="float: left;"><b>Display Names</b></li>
+	<li><a href = "/teamproject/ODMDesign.html">Home - Display Names</a></li>
+	<li><a href = "/teamproject/simpleInsertHB.html">Appointment Creation</a></li>
+	<li><a href = "/teamproject/simpleSearchHB.html">Search Appointments</a></li>
+</ul>
+	
+	<div class = "scrollList">
+		<li class = "scrolling" style="list-style-type:none;">Person 1</li>
+		<li class = "scrolling" style="list-style-type:none;">Person 2</li>
+		<li class = "scrolling" style="list-style-type:none;">Person 3</li>
+	</div>
+
+</body>
+
+</html>
