@@ -1,3 +1,4 @@
+
 #navBar{
 	list-style-type: none;
 	margin: 0px;
@@ -9,7 +10,6 @@
 	position: absolute;
 	font-size: 15px;
 	z-index: 999;
-	background-color: #32a852;
 	   }
 #navBar li{
 	display: inline;
@@ -91,7 +91,7 @@
 }
 
 body{
-	background-color: #2D2D2D;
+	background-image: url("https://i.imgur.com/VqPwuWR.png");
 	background-repeat: repeat;
 		  }
 

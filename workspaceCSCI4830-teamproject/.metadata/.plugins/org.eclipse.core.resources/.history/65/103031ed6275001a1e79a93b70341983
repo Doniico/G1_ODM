@@ -1,3 +1,4 @@
+
 #navBar{
 	list-style-type: none;
 	margin: 0px;
@@ -9,7 +10,7 @@
 	position: absolute;
 	font-size: 15px;
 	z-index: 999;
-	background-color: #32a852;
+	background-color: #FF0000;
 	   }
 #navBar li{
 	display: inline;
@@ -22,13 +23,6 @@
 	color: #FFFFFF;
 	background-color: #4286f4;
 			  }
-#navBar a{
-	text-decoration: none;
-	color: #FFFFFF;
-	font-family: monospace;
-	font-size: 15px;
-	display: block;
-		 }
 
 #menuTitle{
 	font-family: monospace;

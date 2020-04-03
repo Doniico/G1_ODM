@@ -15,11 +15,8 @@
 </ul>
 
 <section>
-	<!-- <h3 id = "formHeading">User Input</h3>-->
-	<br>
-	<br>
-	<br>
-	<br>
+	<h3 id = "formHeading">User Input</h3>
+	
 	<div style="color:white;display: inline-block">
 		<form action="SimpleInsertHB" method="POST">
 			

@@ -9,7 +9,6 @@
 	position: absolute;
 	font-size: 15px;
 	z-index: 999;
-	background-color: #32a852;
 	   }
 #navBar li{
 	display: inline;

@@ -8,7 +8,6 @@
 </header>
 
 <ul id = "navBar">
-	<li style="float: left;"><b>Search Data</b></li>
 	<li><a href = "/teamproject/ODMDesign.html">Home - Display Names</a></li>
 	<li><a href = "/teamproject/simpleInsertHB.html">Appointment Creation</a></li>
 	<li><a href = "/teamproject/simpleSearchHB.html">Search Appointments</a></li>
@@ -16,11 +15,8 @@
 
 <section>
 	
-	<!--<h3 id = "formHeading">Search Data</h3>-->
-	<br>
-	<br>
-	<br>
-	<br>
+	<h3 id = "formHeading">Search Data</h3>
+	
 	<div style="color:white;display: inline-block">
 		<form action="SimpleSearchHB" method="POST">
 		

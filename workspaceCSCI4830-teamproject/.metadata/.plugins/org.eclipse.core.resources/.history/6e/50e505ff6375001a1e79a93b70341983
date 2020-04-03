@@ -17,10 +17,7 @@
 <section>
 	
 	<!--<h3 id = "formHeading">Search Data</h3>-->
-	<br>
-	<br>
-	<br>
-	<br>
+	
 	<div style="color:white;display: inline-block">
 		<form action="SimpleSearchHB" method="POST">
 		
