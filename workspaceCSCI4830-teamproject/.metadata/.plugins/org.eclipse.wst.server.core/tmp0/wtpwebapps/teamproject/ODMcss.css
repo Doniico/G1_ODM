@@ -30,27 +30,6 @@
 	display: block;
 		 }
 
-#menuTitle{
-	font-family: monospace;
-	color: #blue;
-	font-size: 30px;
-	background-color: blue;
-		  }
-#menu{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	width: 15%;
-	background-color: ;
-	text-align: center;
-	position: fixed;
-	height: 100%;
-	left: 0px;
-	background-color: "#315185";
-	overflow: auto;
-	z-index: 999;
-	 }
-
 #homeImg{
 	position: relative;
 	display: block;
@@ -77,8 +56,7 @@
 
 body{
 	background-color: #2D2D2D;
-	background-repeat: repeat;
-		  }
+}
 
 .scrollList {
 	position: absolute;
