@@ -1,6 +1,0 @@
-127.0.0.1 - - [29/Mar/2020:17:07:43 -0500] "GET / HTTP/1.1" 404 1036
-0:0:0:0:0:0:0:1 - - [29/Mar/2020:17:07:44 -0500] "GET /teamproject/Open%20Door%20Mission%20Design.html HTTP/1.1" 200 2141
-0:0:0:0:0:0:0:1 - - [29/Mar/2020:17:07:44 -0500] "GET /teamproject/ODMcss.css HTTP/1.1" 200 3891
-0:0:0:0:0:0:0:1 - - [29/Mar/2020:17:07:44 -0500] "GET /teamproject/ODMjs.js HTTP/1.1" 200 555
-0:0:0:0:0:0:0:1 - - [29/Mar/2020:17:09:14 -0500] "GET /teamproject/simpleInsertHB.html HTTP/1.1" 200 1062
-127.0.0.1 - - [29/Mar/2020:17:11:17 -0500] "GET / HTTP/1.1" 404 1036
