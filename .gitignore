@@ -1,4 +1,29 @@
 .metadata
-.idea
-*.iml
 *.db
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+*.iml
+.idea/
+
+# Maven
+target/
+release.properties
+*.releaseBackup
+
+# Svn
+.svn/
+
+# Project Specific
+up_database.*
+testeronii.txt
+
+# Other
+log/
+*.log
+bin/
+logs/
