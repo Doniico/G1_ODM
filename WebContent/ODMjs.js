@@ -2,7 +2,7 @@ $(document).ready(function() {
     var i = 0;
     $(".scrollList > li").each(function () {
           $(this).css("top", i);
-          i += 200;
+          i += 175;
           window.scrollList($(this));
     });
 });
@@ -15,8 +15,8 @@ window.scrollList = function($elem) {
         $elem.css("top", top);
     }
     $elem.animate(
-        { top: top - 75 },
-        400,
+        { top: top - 60 },
+        750,
         function () {
             window.scrollList($(this))
         }
