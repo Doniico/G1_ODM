@@ -141,7 +141,7 @@ public class Appointment {
 
    @Override
    public String toString() {
-      return "Appointment: " + this.id + ", " + this.firstName + " " + this.lastName 
+      return "User: " + this.id + ", " + this.firstName + " " + this.lastName 
     		  + ", " + this.address + ", " + this.date + ", " + this.time
     		  + ", " + this.details;
    }
