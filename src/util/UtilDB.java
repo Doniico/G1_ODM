@@ -3,6 +3,7 @@
 package util;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -111,6 +112,29 @@ public class UtilDB {
       {
          tx = session.beginTransaction();
          session.save(new Appointment(id, firstName, lastName, address, date, time, details));
+         tx.commit();
+      } 
+      catch (HibernateException e) 
+      {
+         if (tx != null)
+            tx.rollback();
+         e.printStackTrace();
+      }
+      finally 
+      {
+         session.close();
+      }
+   }
+   
+   public static void createUsers(Integer id, String firstName, String lastName, String dateOfBirth, 
+		   String email, String phone, String address) 
+   {
+      Session session = getSessionFactory().openSession();
+      Transaction tx = null;
+      try 
+      {
+         tx = session.beginTransaction();
+         session.save(new Appointment(id, firstName, lastName, dateOfBirth, email, phone, address));
          tx.commit();
       } 
       catch (HibernateException e) 
