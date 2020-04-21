@@ -9,8 +9,10 @@ $(document).ready(function() {
 
 window.scrollList = function($elem) {
     var top = parseInt($elem.css("top"));
-    var temp = -1 * $('.scrollList > li').height();
+    var temp = -1 * $('.scrollList').height();
+    console.log('this is temp: ', temp);
     if (top < temp) {
+        console.log('temp in if/then: ', temp);
         top = $('.scrollList').height();
         $elem.css("top", top);
     }
