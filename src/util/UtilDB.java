@@ -127,7 +127,7 @@ public class UtilDB {
       }
    }
    
-   public static void createUsers(Integer id, String firstName, String lastName, String dateOfBirth, 
+   public static void createUsers(String firstName, String lastName, String dateOfBirth, 
 		   String email, String phone, String address, String userid) 
    {
       Session session = getSessionFactory().openSession();
@@ -135,7 +135,7 @@ public class UtilDB {
       try 
       {
          tx = session.beginTransaction();
-         session.save(new User(id, firstName, lastName, dateOfBirth, email, phone, address, userid));
+         session.save(new User(firstName, lastName, dateOfBirth, email, phone, address, userid));
          tx.commit();
       } 
       catch (HibernateException e) 

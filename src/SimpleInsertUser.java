@@ -21,7 +21,7 @@ public class SimpleInsertUser  extends HttpServlet implements Info {
    }
    
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	   
-	   int id = Integer.parseInt(request.getParameter("id").trim());
+	   //int id = Integer.parseInt(request.getParameter("id").trim());
 	   String firstName = request.getParameter("firstName").trim();
        String lastName = request.getParameter("lastName").trim();
        String dateOfBirth = request.getParameter("dateOfBirth").trim();
@@ -42,7 +42,7 @@ public class SimpleInsertUser  extends HttpServlet implements Info {
        while (UsersIDs.contains(generateID));
        UsersIDs.add(Integer.parseInt(generateID));
 	   
-      UtilDB.createUsers(id, firstName, lastName, dateOfBirth, email, phone, address, generateID);
+      UtilDB.createUsers(firstName, lastName, dateOfBirth, email, phone, address, generateID);
       
 
       response.setContentType("text/html");

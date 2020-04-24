@@ -13,7 +13,6 @@ import java.util.UUID;
 	/**
 	 * @since J2SE-1.8
 	 CREATE TABLE Appointments (
-	  id INT NOT NULL AUTO_INCREMENT,    
 	  firstname VARCHAR(100) NOT NULL,   
 	  lastname VARCHAR(100) NOT NULL,
 	  dateOfBirth VARCHAR(50) NOT NULL,
@@ -29,8 +28,8 @@ import java.util.UUID;
 
 	   @Id
 	   @GeneratedValue(strategy = GenerationType.IDENTITY)
-	   @Column(name = "id")
-	   private Integer id;
+	   //@Column(name = "id")
+	   //private Integer id;
 	   
 	   @Column(name = "firstName")
 	   private String firstName;
@@ -56,10 +55,9 @@ import java.util.UUID;
 	   public User() {
 	   }
 
-	   public User(Integer id, String firstName, String lastName, String dateOfBirth, 
+	   /*public User(String firstName, String lastName, String dateOfBirth, 
 			   String email, String phone, String address, String userid)
 	   {
-		   this.id = id;
 		   this.firstName = firstName;
 		   this.lastName = lastName;
 		   this.dateOfBirth = dateOfBirth;
@@ -70,7 +68,7 @@ import java.util.UUID;
 		   
 		   
 		   
-	   }
+	   }*/
 
 	   public User(String firstName, String lastName, String dateOfBirth, 
 			   String email, String phone, String address, String userid)
@@ -85,13 +83,13 @@ import java.util.UUID;
 
 	   }
 
-	   public Integer getId() {
+	  /* public Integer getId() {
 	      return id;
 	   }
 
 	   public void setId(Integer id) {
 	      this.id = id;
-	   }
+	   }*/
 
 	   public String getFirstName()
 	   {
@@ -167,7 +165,7 @@ import java.util.UUID;
 
 	   @Override
 	   public String toString() {
-	      return "Appointment: " + this.id + ", " + this.firstName + " " + this.lastName 
+	      return "User: " + this.firstName + " " + this.lastName 
 	    		  + ", " + this.dateOfBirth + ", " + this.email + ", " + this.phone
 	    		  + ", " + this.address + ", " + this.userid;
 	   }
