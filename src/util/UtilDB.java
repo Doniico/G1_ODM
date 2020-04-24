@@ -12,6 +12,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 import datamodel.Appointment;
+import datamodel.User;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -134,7 +135,7 @@ public class UtilDB {
       try 
       {
          tx = session.beginTransaction();
-         session.save(new Appointment(id, firstName, lastName, dateOfBirth, email, phone, address));
+         session.save(new User(id, firstName, lastName, dateOfBirth, email, phone, address, userid));
          tx.commit();
       } 
       catch (HibernateException e) 

@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import java.util.Random;
 import java.util.UUID;
 
 	/**
@@ -49,13 +51,13 @@ import java.util.UUID;
 	   private String address;
 	   
 	   @Column(name = "userid")
-	   private UUID userid;
+	   private String userid;
 
 	   public User() {
 	   }
 
 	   public User(Integer id, String firstName, String lastName, String dateOfBirth, 
-			   String email, String phone, String address, UUID userid)
+			   String email, String phone, String address, String userid)
 	   {
 		   this.id = id;
 		   this.firstName = firstName;
@@ -71,7 +73,7 @@ import java.util.UUID;
 	   }
 
 	   public User(String firstName, String lastName, String dateOfBirth, 
-			   String email, String phone, String address, UUID userid)
+			   String email, String phone, String address, String userid)
 	   {
 		   this.firstName = firstName;
 		   this.lastName = lastName;
@@ -80,6 +82,7 @@ import java.util.UUID;
 		   this.phone = phone;
 		   this.address = address;
 		   this.userid = userid;
+
 	   }
 
 	   public Integer getId() {
@@ -151,11 +154,11 @@ import java.util.UUID;
 	   
 	   public void setUserid(String userid)
 	   {
-		   UUID uniqeid = UUID.randomUUID();
-		   this.userid = uniqeid;
+		   
+		   this.userid = userid;
 	   }
 	   
-	   public UUID getUserid()
+	   public String getUserid()
 	   {
 		   return userid;
 	   }

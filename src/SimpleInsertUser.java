@@ -1,5 +1,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,8 +29,20 @@ public class SimpleInsertUser  extends HttpServlet implements Info {
        String phone = request.getParameter("phone").trim();
        String address = request.getParameter("address").trim();
        String userid = request.getParameter("userid").trim();
-      
-      UtilDB.createUsers(id, firstName, lastName, dateOfBirth, email, phone, address, userid);
+       
+       ArrayList<Integer> UsersIDs = new ArrayList<Integer>();
+       String generateID = "";
+       do
+       {
+       Random rnd = new Random();
+	   int number = rnd.nextInt(999999);
+	   generateID = String.format("%06d", number);
+	   
+       } 
+       while (UsersIDs.contains(generateID));
+       UsersIDs.add(Integer.parseInt(generateID));
+	   
+      UtilDB.createUsers(id, firstName, lastName, dateOfBirth, email, phone, address, generateID);
       
 
       response.setContentType("text/html");
