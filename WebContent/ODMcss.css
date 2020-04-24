@@ -46,7 +46,7 @@ body{
 }
 
 .scrollList {
-	height: 725px;
+	/*height: 725px;*/
 	overflow: hidden;
 	color: #FFFFFF;
 	-webkit-transition: opacity 5s ease-out;
@@ -55,7 +55,7 @@ body{
 
 .scrollList > li {
 	position: absolute;
-	width: 99%;
+	width: 90%;
 }
 
 .cardBlock {
