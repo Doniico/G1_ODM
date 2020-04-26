@@ -45,7 +45,7 @@ input[type=text]:focus {
 <ul id = "navBar">
 	<li style="float: left;"><b>Enter Data</b></li>
 	<li><a href = "/teamproject/ODMDesign.html">Home - Display Names</a></li>
-	<li><a href = "/teamproject/simpleInsertHB.html">User Creation</a></li>
+	<li><a href = "/teamproject/simpleInsertUser.html">User Creation</a></li>
 	<li><a href = "/teamproject/simpleInsertHB.html">Appointment Creation</a></li>
 	<li><a href = "/teamproject/simpleSearchHB.html">Search Appointments</a></li>
 </ul>
@@ -59,12 +59,19 @@ input[type=text]:focus {
 	<div style="color:white;display: inline-block;font-family: monospace;">
 		<form action="SimpleInsertUserHB" method="POST">
 			
-			ID Number: <input type="text" name="id">
-			<br><br><br>
+		
 			First Name: <input type="text" name="firstName">
 			<br><br><br>
 			Last Name: <input type="text" name="lastName">
 			<br><br><br>
+			Date of Birth (YYYY-MM-DD): <input type="text" name="dateOfBirth">
+ 			<br><br><br>
+ 			Email: <input type="text" name="email">
+ 			<br><br><br>
+ 			Phone: <input type="text" name="phone">
+ 			<br><br><br>
+ 			Address: <input type="text" name="address">
+ 			<br><br><br>
 
 			
 			<input type="submit" value="Submit" />

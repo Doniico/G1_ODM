@@ -52,7 +52,7 @@ public class SimpleInsertHB extends HttpServlet implements Info {
       out.println("<li " + styling + "> Details: " + details);
 
       out.println("</ul>");
-      out.println("<a href=/" + projectName + "/" + searchWebName + " style=\"color:#4286f4;font-family:monospace;\">Search Data</a> <br>");
+      out.println("<a href=/" + projectName + "/" + searchWebName + " style=\"color:#4286f4;font-family:monospace;\">Insert Data</a> <br>");
       out.println("</body></html>");
    }
 
