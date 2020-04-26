@@ -127,15 +127,14 @@ public class UtilDB {
       }
    }
    
-   public static void createUsers(String firstName, String lastName, String dateOfBirth, 
-		   String email, String phone, String address, String userid) 
+   public static void createUsers(int id, String firstName, String lastName) 
    {
       Session session = getSessionFactory().openSession();
       Transaction tx = null;
       try 
       {
          tx = session.beginTransaction();
-         session.save(new User(firstName, lastName, dateOfBirth, email, phone, address, userid));
+         session.save(new User(id, firstName, lastName));
          tx.commit();
       } 
       catch (HibernateException e) 
@@ -148,5 +147,36 @@ public class UtilDB {
       {
          session.close();
       }
+   }
+   
+   public static List<User> listUsers() 
+   {
+      List<User> resultList = new ArrayList<User>();
+
+      Session session = getSessionFactory().openSession();
+      Transaction tx = null;
+
+      try
+      {
+         tx = session.beginTransaction();
+         List<?> appointments = session.createQuery("FROM User").list();
+         for (Iterator<?> iterator = appointments.iterator(); iterator.hasNext();)
+         {
+        	 User created = (User) iterator.next();
+            resultList.add(created);
+         }
+         tx.commit();
+      }
+      catch (HibernateException e) 
+      {
+         if (tx != null)
+            tx.rollback();
+         e.printStackTrace();
+      }
+      finally 
+      {
+         session.close();
+      }
+      return resultList;
    }
 }
