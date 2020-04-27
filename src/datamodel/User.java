@@ -65,6 +65,7 @@ public class User {
    {
 	   this.firstName = firstName;
 	   this.lastName = lastName;
+	   this.dateOfBirth = dateOfBirth;
 	   this.email = email;
 	   this.phone = phone;
 	   this.address = address;
