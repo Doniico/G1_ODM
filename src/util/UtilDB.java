@@ -135,7 +135,7 @@ public class UtilDB {
       try 
       {
          tx = session.beginTransaction();
-         session.save(new User(id, firstName, lastName, dateOfBirth, email, phone, address));
+         session.save(new User(id, firstName, lastName, dateOfBirth, email, phone, address)); 
          tx.commit();
       } 
       catch (HibernateException e) 

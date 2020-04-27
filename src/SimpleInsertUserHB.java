@@ -55,6 +55,7 @@ public class SimpleInsertUserHB extends HttpServlet implements Info {
             "<body bgcolor=\"#2D2D2D\">\n" + //
             "<h1 align=\"center\" style=\"color:white;font-family:monospace;\">" + DBTitle + "</h1>\n");
       out.println("<ul>");
+      
       String styling = "style=\"color:white;font-family:monospace;\"";
       out.println("<li " + styling + "> ID Number: " + Integer.parseInt(generateID));
       out.println("<li " + styling + "> First Name: " + firstName);
