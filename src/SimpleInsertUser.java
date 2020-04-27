@@ -23,13 +23,21 @@ public class SimpleInsertUser  extends HttpServlet implements Info {
    
   // protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	   
 	   /*//int id = Integer.parseInt(request.getParameter("id").trim());
+=======
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	   
+	   //int id = Integer.parseInt(request.getParameter("id").trim());
+       int id = Integer.parseInt(request.getParameter("userid").trim());
+>>>>>>> refs/remotes/origin/master
 	   String firstName = request.getParameter("firstName").trim();
        String lastName = request.getParameter("lastName").trim();
+<<<<<<< HEAD
        String dateOfBirth = request.getParameter("dateOfBirth").trim();
        String email = request.getParameter("email").trim();
        String phone = request.getParameter("phone").trim();
        String address = request.getParameter("address").trim();
        int userid = Integer.parseInt(request.getParameter("userid").trim());
+=======
+>>>>>>> refs/remotes/origin/master
        
        
        String generateID = "";
@@ -43,7 +51,11 @@ public class SimpleInsertUser  extends HttpServlet implements Info {
        while (UsersIDs.contains(Integer.parseInt(generateID)));
        UsersIDs.add(Integer.parseInt(generateID));
 	   
+<<<<<<< HEAD
       UtilDB.createUsers(Integer.parseInt(generateID), firstName, lastName);
+=======
+      UtilDB.createUsers(id, firstName, lastName);
+>>>>>>> refs/remotes/origin/master
       
 
       response.setContentType("text/html");
@@ -57,13 +69,9 @@ public class SimpleInsertUser  extends HttpServlet implements Info {
             "<h1 align=\"center\">" + title + "</h1>\n");
       out.println("<ul>");
       String styling = "style=\"color:white;font-family:monospace;\"";
+      out.println("<li " + styling + "> ID Number: " + id);
       out.println("<li " + styling + "> First Name: " + firstName);
       out.println("<li " + styling + "> Last Name: " + lastName);
-      out.println("<li " + styling + "> Date Of Birth: " + dateOfBirth);
-      out.println("<li " + styling + "> Phone: " + phone);		      
-      out.println("<li " + styling + "> Email: " + email);		      
-      out.println("<li " + styling + "> Address: " + address);		      
-      out.println("<li " + styling + "> User ID: " + userid);	
       out.println("</ul>");
       out.println("<a href=/" + projectName + "/" + searchWebName + ">Search Data</a> <br>");
       out.println("</body></html>");
