@@ -43,10 +43,10 @@ input[type=text]:focus {
 
 <ul id = "navBar">
 	<li style="float: left;"><b>Search Data</b></li>
-	<li><a href = "/teamproject/ODMDesign.html">Home - Display Names</a></li>
-	<li><a href = "/teamproject/simpleInsertUser.html">User Creation</a></li>
-	<li><a href = "/teamproject/simpleInsertHB.html">Appointment Creation</a></li>
-	<li><a href = "/teamproject/simpleSearchHB.html">Search Appointments</a></li>
+	<li id = "homePage"><a href = "/teamproject/ODMDesign.html">Home - Display Names</a></li>
+	<li id = "userCreation"><a href = "/teamproject/simpleInsertUser.html">User Creation</a></li>
+	<li id = "apptCreation"><a href = "/teamproject/simpleInsertHB.html">Appointment Creation</a></li>
+	<li id = "searchAppt"><a href = "/teamproject/simpleSearchHB.html">Search Appointments</a></li>
 </ul>
 
 <section>
@@ -64,7 +64,7 @@ input[type=text]:focus {
 			<input type="text" name="keywordTitle" id = "fancySearch"> <br />			
 			<br>
 			<br>
-			<input type="submit" value="Search" />
+			<input type="submit" value="Search" id = "searchButton" />
 		</form>
 	</div>
 
