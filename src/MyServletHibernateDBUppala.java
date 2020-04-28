@@ -35,7 +35,7 @@ public class MyServletHibernateDBUppala extends HttpServlet {
 		 "<li class=\"noListStyle\">" +
 	         "<div class=\"cardBlock\">" +
 	         	"<h2 class=\"clientID\">" +
-	         		appointment.getId() + "|" + appointment.getFirstName() + appointment.getLastName() + ", " + appointment.getAddress() + ", " + 
+	         		"IDENTIFICATION # |" + appointment.getId() +
 	     		"</h2>" +
 	     		"<h2 class=\"clientApt\">" +
 	     			appointment.getDate() + " @ " + appointment.getTime() + 
