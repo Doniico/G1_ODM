@@ -13,8 +13,8 @@ public class UserTest {
 	@Test
 	public void constructorSpecificTestValid()
 	{
-		User test = new User(100, "Mickey", "Mouse", "1776-07-04", "MickeyMouse@xxx.com",
-				"402-177-0704", "1600 Pennsylvania Avenue");
+		Users test = new Users(100, "Mickey", "Mouse", "1776-07-04", "MickeyMouse@xxx.com",
+				"402-177-0704", "1600 Pennsylvania Avenue", "57844");
 		
 		assertTrue(100 == test.getId());
 		assertEquals("Mickey", test.getFirstName());
@@ -30,7 +30,7 @@ public class UserTest {
 	@Test
 	public void constructorGeneralTestValid()
 	{
-		User test = new User("Mickey", "Mouse", "1776-07-04", "MickeyMouse@xxx.com",
+		Users test = new Users("Mickey", "Mouse", "1776-07-04", "MickeyMouse@xxx.com",
 				"402-177-0704", "1600 Pennsylvania Avenue");
 		
 		assertEquals("Mickey", test.getFirstName());
@@ -47,11 +47,11 @@ public class UserTest {
 	{
 		try
 		{
-			User test = new User();
+			Users test = new Users();
 		}
 		catch(Exception e)
 		{
-			System.out.println("Could not make user object");
+			System.out.println("Could not make Users object");
 		}
 	}
 	
@@ -60,7 +60,7 @@ public class UserTest {
 	@Test
 	public void generalConstructorIdAttributeTest()
 	{
-		User test = new User("Mickey", "Mouse", "1776-07-04", "MickeyMouse@xxx.com",
+		Users test = new Users("Mickey", "Mouse", "1776-07-04", "MickeyMouse@xxx.com",
 				"402-177-0704", "1600 Pennsylvania Avenue");
 		
 		Random rnd = new Random();
@@ -78,7 +78,7 @@ public class UserTest {
 	@Test
 	public void specificConstructorIdAttributeTest()
 	{
-		User test = new User(100, "Mickey", "Mouse", "1776-07-04", "MickeyMouse@xxx.com",
+		Users test = new Users(100, "Mickey", "Mouse", "1776-07-04", "MickeyMouse@xxx.com",
 				"402-177-0704", "1600 Pennsylvania Avenue");
 		
 		Random rnd = new Random();
@@ -95,7 +95,7 @@ public class UserTest {
 	@Test
 	public void firstNameTest()
 	{
-		User test = new User(100, "Mickey", "Mouse", "1776-07-04", "MickeyMouse@xxx.com",
+		Users test = new Users(100, "Mickey", "Mouse", "1776-07-04", "MickeyMouse@xxx.com",
 				"402-177-0704", "1600 Pennsylvania Avenue");
 		
 		test.setFirstName("Minnie");
@@ -107,7 +107,7 @@ public class UserTest {
 	@Test
 	public void lastNameTest()
 	{
-		User test = new User(100, "George", "Washington", "1776-07-04", "GeorgeWashington@xxx.com",
+		Users test = new Users(100, "George", "Washington", "1776-07-04", "GeorgeWashington@xxx.com",
 				"402-177-0704", "1600 Pennsylvania Avenue");
 		
 		test.setLastName("Bush");
@@ -119,7 +119,7 @@ public class UserTest {
 	@Test
 	public void dateOfBirthTest()
 	{
-		User test = new User(100, "George", "Washington", "1776-07-04", "GeorgeWashington@xxx.com",
+		Users test = new Users(100, "George", "Washington", "1776-07-04", "GeorgeWashington@xxx.com",
 				"402-177-0704", "1600 Pennsylvania Avenue");
 		
 		test.setDateOfBirth("2001-01-20");
@@ -131,7 +131,7 @@ public class UserTest {
 	@Test
 	public void emailTest()
 	{
-		User test = new User(100, "George", "Washington", "1776-07-04", "GeorgeWashington@xxx.com",
+		Users test = new Users(100, "George", "Washington", "1776-07-04", "GeorgeWashington@xxx.com",
 				"402-177-0704", "1600 Pennsylvania Avenue");
 		
 		test.setEmail("GeorgeWashington@xxx.com");
@@ -144,7 +144,7 @@ public class UserTest {
 	@Test
 	public void phoneTest()
 	{
-		User test = new User(100, "George", "Washington", "1776-07-04", "GeorgeWashington@xxx.com",
+		Users test = new Users(100, "George", "Washington", "1776-07-04", "GeorgeWashington@xxx.com",
 				"402-177-0704", "1600 Pennsylvania Avenue");
 		
 		test.setPhone("402-177-0704");
@@ -156,7 +156,7 @@ public class UserTest {
 	@Test
 	public void addressTest()
 	{
-		User test = new User(100, "George", "Washington", "1776-07-04", "GeorgeWashington@xxx.com",
+		Users test = new Users(100, "George", "Washington", "1776-07-04", "GeorgeWashington@xxx.com",
 				"402-177-0704", "1600 Pennsylvania Avenue");
 		
 		test.setAddress("Texas");
@@ -169,10 +169,10 @@ public class UserTest {
 	@Test
 	public void appointmentToString()
 	{
-		User test = new User(100, "George", "Washington", "1776-07-04", 
+		Users test = new Users(100, "George", "Washington", "1776-07-04", 
 				"GeorgeWashington@xxx.com", "402-177-0704", "White House");
 	
-		String toStringCreated = "User: 100, George Washington, 1776-07-04, GeorgeWashington@xxx.com, "
+		String toStringCreated = "Users: 100, George Washington, 1776-07-04, GeorgeWashington@xxx.com, "
 				+ "402-177-0704, White House";
 		assertEquals(toStringCreated, test.toString());
 	}

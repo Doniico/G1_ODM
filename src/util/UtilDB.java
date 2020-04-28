@@ -3,7 +3,6 @@
 package util;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -12,7 +11,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 import datamodel.Appointment;
-import datamodel.User;
+import datamodel.Users;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -134,7 +133,7 @@ public class UtilDB {
       try 
       {
          tx = session.beginTransaction();
-         session.save(new User(id, firstName, lastName));
+         session.save(new Users(id, firstName, lastName));
          tx.commit();
       } 
       catch (HibernateException e) 
@@ -149,9 +148,9 @@ public class UtilDB {
       }
    }
    
-   public static List<User> listUsers() 
+   public static List<Users> listUsers() 
    {
-      List<User> resultList = new ArrayList<User>();
+      List<Users> resultList = new ArrayList<Users>();
 
       Session session = getSessionFactory().openSession();
       Transaction tx = null;
@@ -159,10 +158,10 @@ public class UtilDB {
       try
       {
          tx = session.beginTransaction();
-         List<?> appointments = session.createQuery("FROM User").list();
+         List<?> appointments = session.createQuery("FROM Users").list();
          for (Iterator<?> iterator = appointments.iterator(); iterator.hasNext();)
          {
-        	 User created = (User) iterator.next();
+        	 Users created = (Users) iterator.next();
             resultList.add(created);
          }
          tx.commit();
@@ -182,9 +181,9 @@ public class UtilDB {
    
    public static boolean isUser(String email, String password)
    {
-		List<User> resultList = listUsers();
+		List<Users> resultList = listUsers();
 
-		User personLogginIn = resultList.stream().filter(user -> email.contentEquals(user.getEmail())).findFirst().orElse(null);
+		Users personLogginIn = resultList.stream().filter(user -> email.contentEquals(user.getEmail())).findFirst().orElse(null);
 		
 		if (personLogginIn == null || !personLogginIn.getPassword().equals(password)) {
 			return false;

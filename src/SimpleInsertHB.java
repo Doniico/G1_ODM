@@ -1,8 +1,5 @@
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import util.Info;
 import util.UtilDB;
-import util.UtilFile;
 
 @WebServlet("/SimpleInsertHB")
 public class SimpleInsertHB extends HttpServlet implements Info {
@@ -52,7 +48,7 @@ public class SimpleInsertHB extends HttpServlet implements Info {
       out.println("<li " + styling + "> Details: " + details);
 
       out.println("</ul>");
-      out.println("<a href=/" + projectName + "/" + searchWebName + " style=\"color:#4286f4;font-family:monospace;\">Insert Data</a> <br>");
+      out.println("<a href=/" + projectName + "/" + searchWebName + " style=\"color:#4286f4;font-family:monospace;\">Search Data</a> <br>");
       out.println("</body></html>");
    }
 

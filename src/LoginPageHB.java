@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import datamodel.User;
+import datamodel.Users;
 import util.Info;
 import util.UtilDB;
 
@@ -30,7 +30,7 @@ public class LoginPageHB extends HttpServlet implements Info {
       String docType = "<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">\n"; //
       out.println(docType + //
             "<html>\n " + //
-            "<head><title>" + title + "</title></head>\n" + //
+            "<head><title>Login Page</title></head>\n" + //
             "<body bgcolor=\"#2D2D2D\">\n");
 
       if (email == null || email.isEmpty() || password == null || password.isEmpty()) {
@@ -59,8 +59,8 @@ public class LoginPageHB extends HttpServlet implements Info {
       out.println("</body></html>");
    }
 
-   void display(List<User> userList, PrintWriter out) {
-      for (User userPerson : userList) {
+   void display(List<Users> userList, PrintWriter out) {
+      for (Users userPerson : userList) {
          System.out.println("[DBG] " + userPerson.getFirstName() + ", " //
              + userPerson.getLastName() + ", " //
              + userPerson.getId());

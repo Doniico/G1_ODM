@@ -1,7 +1,5 @@
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -12,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import datamodel.Appointment;
 import util.UtilDB;
-import util.UtilFile;
 
 @WebServlet("/MyServletHibernateDB")
 public class MyServletHibernateDBUppala extends HttpServlet {

@@ -23,7 +23,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Users")
-public class User {
+public class Users {
 
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,10 +51,10 @@ public class User {
    @Column(name = "password")
    private String password;
    
-   public User() {
+   public Users() {
    }
 
-   public User(Integer id, String firstName, String lastName, String address, String dob, String email, String phone, String password)
+   public Users(Integer id, String firstName, String lastName, String address, String dob, String email, String phone, String password)
    {
 	   this.id = id;
 	   this.firstName = firstName;
@@ -66,14 +66,31 @@ public class User {
 	   this.password = password;
    }
    
-   public User(Integer id, String firstName, String lastName)
+   public Users(Integer id, String firstName, String lastName, String address, String dob, String email, String phone)
+   {
+	   this.id = id;
+	   this.firstName = firstName;
+	   this.lastName = lastName;
+	   this.address = address;
+	   this.dateOfBirth = dob;
+	   this.email = email;
+	   this.phone = phone;
+   }
+   
+   public Users(String firstName, String lastName, String dateOfBirth, 
+		   String email, String phone, String address)
+   {
+	   
+   }
+   
+   public Users(Integer id, String firstName, String lastName)
    {
 	   this.id = id;
 	   this.firstName = firstName;
 	   this.lastName = lastName;
    }
 
-   public User(String firstName, String lastName)
+   public Users(String firstName, String lastName)
    {
 	   this.firstName = firstName;
 	   this.lastName = lastName;
