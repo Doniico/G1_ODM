@@ -20,10 +20,10 @@ public class SimpleInsertUserHB extends HttpServlet implements Info {
    
    int i = 0;
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	   
-	  int id = Integer.parseInt(request.getParameter("id").trim());
+	  //int id = Integer.parseInt(request.getParameter("id").trim());
 	  String firstName = request.getParameter("firstName").trim();
       String lastName = request.getParameter("lastName").trim();
-      UtilDB.createUsers(id, firstName, lastName);
+      UtilDB.createUsers(firstName, lastName);
 
       response.setContentType("text/html");
       PrintWriter out = response.getWriter();
@@ -36,7 +36,7 @@ public class SimpleInsertUserHB extends HttpServlet implements Info {
             "<h1 align=\"center\" style=\"color:white;font-family:monospace;\">" + DBTitle + "</h1>\n");
       out.println("<ul>");
       String styling = "style=\"color:white;font-family:monospace;\"";
-      out.println("<li " + styling + "> ID Number: " + id);
+      //out.println("<li " + styling + "> ID Number: " + id);
       out.println("<li " + styling + "> First Name: " + firstName);
       out.println("<li " + styling + "> Last Name: " + lastName);
 

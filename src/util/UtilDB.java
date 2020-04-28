@@ -126,14 +126,14 @@ public class UtilDB {
       }
    }
    
-   public static void createUsers(int id, String firstName, String lastName) 
+   public static void createUsers(String firstName, String lastName) 
    {
       Session session = getSessionFactory().openSession();
       Transaction tx = null;
       try 
       {
          tx = session.beginTransaction();
-         session.save(new Users(id, firstName, lastName));
+         session.save(new Users(firstName, lastName));
          tx.commit();
       } 
       catch (HibernateException e) 
@@ -183,7 +183,7 @@ public class UtilDB {
    {
 		List<Users> resultList = listUsers();
 
-		Users personLogginIn = resultList.stream().filter(user -> email.contentEquals(user.getEmail())).findFirst().orElse(null);
+		Users personLogginIn = resultList.stream().filter(Users -> email.contentEquals(Users.getEmail())).findFirst().orElse(null);
 		
 		if (personLogginIn == null || !personLogginIn.getPassword().equals(password)) {
 			return false;
