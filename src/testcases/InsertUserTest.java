@@ -29,6 +29,7 @@ public class InsertUserTest {
 	public void checkTitle()
 	{
 		//verify title of index page
+		System.out.println(driver.getTitle());
 		assertEquals("Insert User Data", driver.getTitle());
 	}
 	
