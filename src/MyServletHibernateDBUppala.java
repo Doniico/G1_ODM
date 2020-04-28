@@ -27,32 +27,22 @@ public class MyServletHibernateDBUppala extends HttpServlet {
    }
 
    void retrieveDisplayData(PrintWriter out) {
-      String title = "Database Result";
-      String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + //
-            "transitional//en\">\n"; //
-      out.println(docType + //
-            "<html>\n" + //
-            "<head><title>" + title + "</title></head>\n" + //
-            "<body bgcolor=\"#f0f0f0\">\n" + //
-            "<h1 align=\"center\">" + title + "</h1>\n");
-      out.println("<ul>");
       List<Appointment> appointmentsList = UtilDB.listAppointments();
       for (Appointment appointment : appointmentsList) {
-         System.out.println("[DBG] " + appointment.getId() + ", " //
-               + appointment.getFirstName() + ", " //
-               + appointment.getLastName() + ", " //
-               + appointment.getAddress() + ", " //
-               + appointment.getDate() + ", " //
-               + appointment.getTime() + ", " //
-         	   + appointment.getDetails());
+         System.out.println("[DBG] " + appointment.getId() + ", " + appointment.getFirstName() + ", " + appointment.getLastName() + ", " + appointment.getAddress() + ", " + appointment.getDate() + ", " + appointment.getTime() + ", " + appointment.getDetails());
 
-         out.println("<li>" + appointment.getId() + ", " //
-    		 + appointment.getFirstName() + ", " //
-             + appointment.getLastName() + ", " //
-             + appointment.getAddress() + ", " //
-             + appointment.getDate() + ", " //
-             + appointment.getTime() + ", " //
-             + appointment.getDetails() + "</li>");
+         out.println(
+		 "<li class=\"noListStyle\">" +
+	         "<div class=\"cardBlock\">" +
+	         	"<h2 class=\"clientID\">" +
+	         		appointment.getId() + "|" + appointment.getFirstName() + appointment.getLastName() + ", " + appointment.getAddress() + ", " + 
+	     		"</h2>" +
+	     		"<h2 class=\"clientApt\">" +
+	     			appointment.getDate() + " @ " + appointment.getTime() + 
+	     		"</h2>" +
+     		 "</div>" +
+ 		"</li>"
+ 		);
       }
       out.println("</ul>");
       out.println("</body></html>");

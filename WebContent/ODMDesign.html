@@ -7,7 +7,6 @@
 	<link rel="icon" href="https://www.nebraskaimpact.com/sites/default/files/org_logos/opendoormission_logo_withwords.jpg">
 	<link href = "ODMcss.css" rel = "stylesheet">
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 	<script src = "ODMjs.js"></script>
 </head>
 
@@ -25,59 +24,27 @@
 
 <!-- class="scrollList" -->
 	<ul style="color:white;display: inline-block;font-family: monospace;width: 90%;">
-	<marquee direction="up" height="1000">
-		<li class="noListStyle">
-			<div class="cardBlock">
-				<h2 class="clientID">
-					PERSON ID #1
-				</h2>
-				<h2 class="clientApt">
-					Thursday, June 11, 2020 @ 11:00a
-				</h2>
-			</div>
-		</li>
-		<li class="noListStyle">
-			<div class="cardBlock">
-				<h2 class="clientID">
-					PERSON ID #2
-				</h2>
-				<h2 class="clientApt">
-					Friday, June 12, 2020 @ 11:00a
-				</h2>
-			</div>
-		</li>
-		<li class="noListStyle">
-			<div class="cardBlock">
-				<h2 class="clientID">
-					PERSON ID #3
-				</h2>
-				<h2 class="clientApt">
-					Saturday, June 13, 2020 @ 11:00a
-				</h2>
-			</div>
-		</li>
-		<li class="noListStyle">
-			<div class="cardBlock">
-				<h2 class="clientID">
-					PERSON ID #4
-				</h2>
-				<h2 class="clientApt">
-					Monday, June 15, 2020 @ 10:00a
-				</h2>
-			</div>
-		</li>
-		<li class="noListStyle">
-			<div class="cardBlock">
-				<h2 class="clientID">
-					PERSON ID #5
-				</h2>
-				<h2 class="clientApt">
-					Tuesday, June 16, 2020 @ 2:00p
-				</h2>
-			</div>
-		</li>
+		<marquee id="infiniScroll" direction="up" height="800">
+			<li class="noListStyle">
+				<div class="cardBlock">
+					<h2 class="clientID">
+						PERSON ID #1
+					</h2>
+					<h2 class="clientApt">
+						Thursday, June 11, 2020 @ 11:00a
+					</h2>
+				</div>
+			</li>
 		</marquee>
 	</ul>
+	
+	<script type="text/javascript">
+		console.log('hello world!')
+		$.get('MyServletHibernateDB', function (data) {
+             console.log('data: ', data);
+             $("#infiniScroll").append(data);
+         });
+	</script>
 </body>
 
 </html>
